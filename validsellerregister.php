@@ -8,7 +8,7 @@
      $email=$_POST["email"];
      $phone=$_POST["phone"];
      $shop=$_POST["shopname"];
-     $shopno=$_POST["food"];
+     $shopno=$_POST["shopno"];
      $street=$_POST["street"];
      $city=$_POST["city"];
      $state=$_POST["state"];
@@ -19,7 +19,7 @@
 
      
 
-       $r=mysqli_query($con,"insert into seller(sfname,slname,susername,semail,sphone,sshopname,sshopcategory,sstreet,scity,sstate,scountry,spincode,spassword) values('$fn','$ln','$un','$email','$phone','$shop','$shopno','$street','$city','$state','$country','$pin','$pass') ");
+       $r=mysqli_query($con,"insert into seller(sfname,slname,susername,semail,sphone,sshopname,sshopno,sstreet,scity,sstate,scountry,spincode,spassword) values('$fn','$ln','$un','$email','$phone','$shop','$shopno','$street','$city','$state','$country','$pin','$pass') ");
        if($r)
        header("location:sellerlogin.php");
    

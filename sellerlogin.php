@@ -44,10 +44,10 @@
                                     <a class="dropdown-item" href="loginform.php" style="color:black;">Customer Login</a>
                                     
                                 </div>
-                              <li><a href="" style="color:black">About Us</a></li>
+                              <li><a href="#" style="color:black">About Us</a></li>
 
                             
-                            <li><a href="" style="color:black;">Contact</a></li> 
+                            <li><a href="contact.php" style="color:black;">Contact</a></li> 
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -60,7 +60,7 @@
     </header>
     
   <div class="d-lg-flex half" style="height:100%">
-    <div class="bg order-1 order-md-2" style="background-image: url('assets/images/seller.jpg');margin-top:% ;"></div>
+    <div class="bg order-1 order-md-2" style="background-image: url('assets/images/seller.jpg');"></div>
     <div class="contents order-2 order-md-1">
 
       <div class="container" >

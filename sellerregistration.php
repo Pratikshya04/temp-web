@@ -111,24 +111,15 @@
                   </div>    
                 </div> 
               </div>
-
+              
               <div class="row">
-                <div class="col-md-6">
+              <div class="col-md-6">
                   <div class="form-group first">
-                    
-                    <label for="Shopcategory">Shop Category</label>
-                   
-                    <select name="food" id="food" placeholder="Select category" class="form-control">
-  <option value="grocery">Grocery</option>
-  <option value="fruitsveggies">Fruits and vegetables</option>
-  <option value="dairyproducts">Dairy Products</option>
-
-</select>
-
-                   
+                    <label for="email">Shop-No</label>
+                    <input type="text" name="shopname" class="form-control" id="shopno">
                   </div>    
                 </div>
-              
+
                 <div class="col-md-6">
                   <div class="form-group first">
                     <label for="Street">Street name</label>
@@ -186,7 +177,7 @@
                 </div>
               </div>
               
-              <div class="d-flex mb-5 mt-4 align-items-center" style="">
+              <div class="d-flex mb-5 mt-4 align-items-center" >
                 <div class="d-flex align-items-center">
                 <label class="control control--checkbox mb-0"><span class="caption">Creating an account means you're okay with our <a href="#">Terms and Conditions</a> and our <a href="#">Privacy Policy</a>.</span>
                   <input type="checkbox" checked="checked"/>

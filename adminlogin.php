@@ -33,8 +33,8 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav" style="padding-top:1.3rem;">
                             <li><a href="index.php" style="color:black;">Home</a></li>
-                            <li><a href="" style="color:black;">Products</a></li>
-                            <li><a href="" style="color:black;">Checkout</a></li>
+                            <li><a href="#" style="color:black;">Products</a></li>
+                            <li><a href="#" style="color:black;">Checkout</a></li>
                             
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="color:red;">Login</a>
@@ -44,10 +44,10 @@
                                     <a class="dropdown-item" href="sellerlogin.php" style="color:black;">Seller Login</a>
                                     
                                 </div>
-                              <li><a href="" style="color:black">About Us</a></li>
+                              <li><a href="#" style="color:black">About Us</a></li>
 
                             
-                            <li><a href="" style="color:black;">Contact</a></li> 
+                            <li><a href="contact.php" style="color:black;">Contact</a></li> 
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -58,11 +58,6 @@
             </div>
         </div>
     </header>
-    
-    
-    
-    
-  
 
   <div class="d-lg-flex half" style="height:100%">
     <div class="bg order-1 order-md-2" style="background-image: url('assets/images/gro.jpg');margin-top:-15% ;"></div>
@@ -73,7 +68,7 @@
           <div class="col-md-7" style="margin-top:20%;">
             <h3>Login</h3>
             <p class="mb-4">Enter Your Username and Password</p>
-            <form action="loginvalid.php" method="post">
+            <form action="adminvalid.php" method="post">
               <div class="form-group first">
                 <label for="username">Username</label>
                 <input type="text" class="form-control" name="username" placeholder="your-email@gmail.com" id="username">
