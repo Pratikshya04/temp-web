@@ -89,8 +89,8 @@
                     <span>Delete Seller</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="viewseller.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                <a class="nav-link"  href="viewseller.php">
+                    <i class="fas fa-fw fa-chart-area" style="color:white;"></i>
                     <span>View Seller</span></a>
             </li>
             <li class="nav-item">
@@ -110,10 +110,10 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                        <a class="collapse-item" href="#">Colors</a>
+                        <a class="collapse-item" href="#">Borders</a>
+                        <a class="collapse-item" href="#">Animations</a>
+                        <a class="collapse-item" href="#">Other</a>
                     </div>
                 </div>
             </li>
@@ -136,27 +136,27 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <a class="collapse-item" href="#">Login</a>
+                        <a class="collapse-item" href="#">Register</a>
+                        <a class="collapse-item" href="#">Forgot Password</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                        <a class="collapse-item" href="#">404 Page</a>
+                        <a class="collapse-item" href="#">Blank Page</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tables</span></a>
             </li>
@@ -397,12 +397,12 @@
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                         
                     </div>
-                    <div class="page-hero bg-image overlay-dark" style="background-image: url(); background-repeat:no-repeat;background-size:cover;height:20%">
+                    <div class="page-hero bg-image overlay-dark" style="background-image: url(assets/images/addseller.jpg); background-repeat:no-repeat;background-size:cover;height:20%">
     <div class="hero-section">
       <div class="container text-center wow zoomIn">
           <br>
-        <span class="subhead" style='color:black'>Let's make it easy</span><br>
-        <span class="display-4" style="height:1em;color:black">View Seller</span>
+        <span class="subhead" style='color:aliceblue'>Let's make it easy</span><br>
+        <span class="display-4" style="height:1em;color:aliceblue">View Seller</span>
         <br>
         <br>
         <a href="#" class="btn "></a>
@@ -411,6 +411,7 @@
   </div>
   <div style='float:right; width:80%'>
 	<br>
+    <br><br>
 	<table border="1" id="example" class="display" style='width:50em;margin-left:-1.875em !important' >
          <thead>
              <tr style='color:black;font-weight:bold'>

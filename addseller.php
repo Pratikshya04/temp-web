@@ -76,8 +76,8 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="addseller.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                <a class="nav-link"  href="addseller.php">
+                    <i class="fas fa-fw fa-chart-area" style="color:white;"></i>
                     <span>Add Seller</span></a>
         
                
@@ -99,6 +99,25 @@
             </li>
 
            
+           <!-- Nav Item - Utilities Collapse Menu -->
+           <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Utilities</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <a class="collapse-item" href="#">Colors</a>
+                        <a class="collapse-item" href="#">Borders</a>
+                        <a class="collapse-item" href="#">Animations</a>
+                        <a class="collapse-item" href="#">Other</a>
+                    </div>
+                </div>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -377,12 +396,12 @@
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                         
                     </div>
-                    <div class="page-hero bg-image overlay-dark" style="background-image: url(); background-repeat:no-repeat;background-size:cover;height:20%">
+                    <div class="page-hero bg-image overlay-dark" style="background-image: url(assets/images/addseller.jpg); background-repeat:no-repeat;background-size:cover;height:20%">
     <div class="hero-section">
       <div class="container text-center wow zoomIn">
           <br>
-        <span class="subhead" style='color:black'>Let's make it easy</span><br>
-        <span class="display-4" style="height:1em;color:black">Add Seller</span>
+        <span class="subhead" style='color:aliceblue'>Let's make it easy</span><br>
+        <span class="display-4" style="height:1em;color:aliceblue">Add Seller</span>
         <br>
         <br>
         <a href="#" class="btn "></a>
@@ -405,15 +424,16 @@
                   </div>    
                 </div>
               </div>
+              
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <div class="form-group first">
-                    <label for="email">username</label>
+                    <label for="username">username</label>
                     <input type="text" name="username" class="form-control" placeholder="e.g. user123" id="username">
                   </div>    
                 </div>
               
-                <div class="col-md-12">
+                <div class="col-md-6">
                   <div class="form-group first">
                     <label for="email">Email Address</label>
                     <input type="email" name="email" class="form-control" placeholder="e.g. john@your-domain.com" id="email">

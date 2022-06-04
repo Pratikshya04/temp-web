@@ -81,7 +81,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group first">
-                    <label for="email">username</label>
+                    <label for="username">username</label>
                     <input type="text" name="username" class="form-control" placeholder="e.g. user123" id="username">
                   </div>    
                 </div>
