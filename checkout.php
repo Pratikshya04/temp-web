@@ -130,10 +130,7 @@
                                      <label>Address 1:</label>
                                      <input type="text">
                                 </div>
-                                <div class="col-sm-6 col-xs-12">
-                                     <label>Address 2:</label>
-                                     <input type="text">
-                                </div>
+                               
                            </div>
                            <div class="row">
                                 <div class="col-sm-6 col-xs-12">
@@ -150,15 +147,7 @@
                                      <label>Zip:</label>
                                      <input type="text">
                                 </div>
-                                <div class="col-sm-6 col-xs-12">
-                                     <label>Country:</label>
-                                     <select>
-                                          <option value="">-- Choose --</option>
-                                          <option value="">-- Choose --</option>
-                                          <option value="">-- Choose --</option>
-                                          <option value="">-- Choose --</option>
-                                     </select>
-                                </div>
+                                
                            </div>
 
                            <div class="row">
@@ -167,16 +156,12 @@
                                      
                                      <select>
                                           <option value="">-- Choose --</option>
-                                          <option value="bank">Bank account</option>
                                           <option value="cash">Cash</option>
                                           <option value="paypal">PayPal</option>
                                      </select>
                                 </div>
 
-                                <div class="col-sm-6 col-xs-12">
-                                     <label>Captcha</label>
-                                     <input type="text">
-                                </div>
+                                
                             </div>  
                             
                             <div class="row">
@@ -198,71 +183,8 @@
                     <br>
                 </div>
 
-                <div class="col-md-4">
-                    <ul class="list-group list-group-no-border">
-                      <li class="list-group-item" style="margin:0 0 -1px">
-                         <div class="row">
-                            <div class="col-6">
-                                <strong>Sub-total</strong>
-                            </div>
+                
 
-                            <div class="col-6">
-                                <h5 class="text-right">$ 128.00</h5>
-                            </div>
-                         </div>
-                      </li>
-
-                      <li class="list-group-item" style="margin:0 0 -1px">
-                         <div class="row">
-                            <div class="col-6">
-                                <strong>Extra</strong>
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="text-right">$ 0.00</h5>
-                            </div>
-                         </div>
-                      </li>
-
-                      <li class="list-group-item" style="margin:0 0 -1px">
-                         <div class="row">
-                            <div class="col-6">
-                                <strong>Tax</strong>
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="text-right">$ 10.00</h5>
-                            </div>
-                         </div>
-                      </li>
-
-                      <li class="list-group-item" style="margin:0 0 -1px">
-                         <div class="row">
-                            <div class="col-6">
-                                <h4><strong>Total</strong></h4>
-                            </div>
-
-                            <div class="col-6">
-                                <h4 class="text-right">$ 138.00</h4>
-                            </div>
-                         </div>
-                      </li>
-
-                      <li class="list-group-item" style="margin:0 0 -1px">
-                         <div class="row">
-                            <div class="col-6">
-                                <strong>Deposit</strong>
-                            </div>
-
-                            <div class="col-6">
-                                <h5 class="text-right">$ 10.00</h5>
-                            </div>
-                         </div>
-                      </li>
-                    </ul>
-
-                    <br>
-                </div>
             </div>
         </div>
     </section>

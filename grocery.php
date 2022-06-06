@@ -10,6 +10,60 @@ if($result->status=='success')
     $regiondisplay=$result->regionName;
   
  }
+
+
+ if(isset($_POST["add_to_cart"]))
+{
+	if(isset($_SESSION["shopping_cart"]))
+	{
+		$item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
+		if(!in_array($_GET["id"], $item_array_id))
+		{
+			$count = count($_SESSION["shopping_cart"]);
+			$item_array = array(
+				'item_id'			=>	$_GET["id"],
+				'item_name'			=>	$_POST["hidden_name"],
+				'item_price'		=>	$_POST["hidden_price"],
+				'item_quantity'		=>	$_POST["quantity"]
+			);
+			$_SESSION["shopping_cart"][$count] = $item_array;
+		}
+		else
+		{
+			echo '<script>alert("Item Already Added")</script>';
+		}
+	}
+	else
+	{
+		$item_array = array(
+			'item_id'			=>	$_GET["id"],
+			'item_name'			=>	$_POST["hidden_name"],
+			'item_price'		=>	$_POST["hidden_price"],
+			'item_quantity'		=>	$_POST["quantity"]
+		);
+		$_SESSION["shopping_cart"][0] = $item_array;
+	}
+}
+
+if(isset($_GET["action"]))
+{
+	if($_GET["action"] == "delete")
+	{
+		foreach($_SESSION["shopping_cart"] as $keys => $values)
+		{
+			if($values["item_id"] == $_GET["id"])
+			{
+				unset($_SESSION["shopping_cart"][$keys]);
+				echo '<script>alert("Item Removed")</script>';
+				echo '<script>window.location="grocery.php"</script>';
+			}
+		}
+	}
+}
+
+
+  
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +110,7 @@ if($result->status=='success')
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         
-                        <a href="showproducts.php" class="logo"><img src ="assets/images/logonew.svg" style="height:9rem; width:9rem; margin-top:-1.5rem; margin-left:-5.2rem;"><span style="padding-left:-2rem;font-size:2rem">Gro-Fresh</span><em> </em></a>
+                        <a href="index.php" class="logo"><img src ="assets/images/logonew.svg" style="height:9rem; width:9rem; margin-top:-1.5rem; margin-left:-5.2rem;"><span style="padding-left:-2rem;font-size:2rem">Gro-Fresh</span><em> </em></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav" style="padding-top:1.3rem;">
@@ -69,7 +123,7 @@ if($result->status=='success')
                                 <a class="dropdown-item" href="grocery.php">Groceries</a>
                                 
                                     
-                                    <a class="dropdown-item" href="vegetable.php">Fruits and Vegetables</a>
+                                    <a class="dropdown-item" href="vegetables.php">Fruits and Vegetables</a>
                                     <a class="dropdown-item" href="dairy.php">Dairy Products</a>
                                     
                                 </div>
@@ -139,7 +193,124 @@ if($result->status=='success')
     </header>
     <!-- ***** Header Area End ***** -->
 
-             
+    <!-- ***** Call to Action Start ***** -->
+    <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="cta-content">
+                        <br>
+                        <br>
+                        <h2>Our <em>Products</em></h2>
+                        <p>
+                            Select your product from our menu
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Call to Action End ***** -->
+
+    <!-- ***** Fleet Starts ***** -->
+    <body>
+		<br />
+		<div class="container">
+    <div class="row">
+			<br />
+			<br />
+			<br />
+			<br /><br />
+			<?php
+              $connect=mysqli_connect("localhost","root","","vendorsnearyou");
+				$query = "select * from products where pcategory='grocery'";
+				$result = mysqli_query($connect, $query);
+				if(mysqli_num_rows($result) > 0)
+				{
+					while($row = mysqli_fetch_array($result))
+					{
+				?>
+			<div class="col-lg-3">
+				<form method="POST" action="grocery.php?action=add&id=<?php echo $row[0]; ?>">
+					<div style="border:1px solid #333; background-color:#f1f1f1; border-radius:0.3125rem; padding:1rem;" text-align="center">
+						<img src="seller/img/<?php echo $row["image"] ?>" class="img-responsive" style='height:10em;width:8em' /><br />
+
+						<h4 class="text-info"><?php echo $row["p_name"]; ?></h4>
+
+						<h4 class="text-danger">INR <?php echo $row["price"]; ?></h4>
+
+						<input type="text" name="quantity" value="1" class="form-control" />
+
+						<input type="hidden" name="hidden_name" value="<?php echo $row["p_name"]; ?>" />
+
+						<input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
+
+						<input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
+
+					</div>
+          
+				</form>
+			</div>
+			<?php
+					}
+				}
+			?>
+			<div style="clear:both"></div>
+			<br />
+      </div>
+      <br><br>
+			<h3>Order Details</h3>
+			<div class="table-responsive">
+                <form method="POST" action="checkout.php" >
+				<table class="table table-bordered">
+					<tr>
+						<th width="40%">Item Name</th>
+						<th width="10%">Quantity</th>
+						<th width="20%">Price</th>
+						<th width="15%">Total</th>
+						<th width="5%">Action</th>
+					</tr>
+					<?php
+                     
+
+
+
+					if(!empty($_SESSION["shopping_cart"]))
+					{
+						$total = 0;
+						foreach($_SESSION["shopping_cart"] as $keys => $values)
+						{
+					?>
+					<tr>
+						<td><?php echo $values["item_name"]; ?></td>
+						<td><?php echo $values["item_quantity"]; ?></td>
+						<td>INR <?php echo $values["item_price"]; ?></td>
+						<td>INR <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
+						<td><a href="grocery.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
+					</tr>
+					<?php
+							$total = $total + ($values["item_quantity"] * $values["item_price"]);
+						}
+					?>
+					<tr>
+						<td colspan="3" align="right">Total</td>
+						<td align="right">INR <?php echo number_format($total, 2); ?></td>
+                        <td><input type="text" value="<?php echo $total ?>" name="total" hidden></td>
+						<td><input type="submit" value="Pay Now" class="btn btn-success"></td>
+					</tr>
+					<?php
+					}
+					?>
+						
+				</table>
+                </form>
+			</div>
+        
+		</div>
+	</div>
+	<br />
+	</body>
+</html>
     
     <!-- ***** Footer Start ***** -->
     <footer>
@@ -147,8 +318,6 @@ if($result->status=='success')
             <div class="row">
                 <div class="col-lg-12">
                     <p>
-                        Copyright © 2020 Company Name
-                        - Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a>
                     </p>
                 </div>
             </div>

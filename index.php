@@ -66,14 +66,12 @@ if($result->status=='success')
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
                               
                                 <div class="dropdown-menu">
-                                <a class="dropdown-item" href="adminlogin.php">Groceries</a>
-                                
-                                    
-                                    <a class="dropdown-item" href="loginform.php">Fruits and Vegetables</a>
-                                    <a class="dropdown-item" href="">Dairy Products</a>
+                                <a class="dropdown-item" href="grocery.php">Groceries</a>
+                                    <a class="dropdown-item" href="vegetables.php">Fruits and Vegetables</a>
+                                    <a class="dropdown-item" href="dairy.php">Dairy Products</a>
                                     
                                 </div>
-                            <li><a href="">Checkout</a></li>
+                            <li><a href="checkout.php">Checkout</a></li>
                             
                             
                             
@@ -87,7 +85,27 @@ if($result->status=='success')
                                   $logornot=$_SESSION["clog"];
                                    if($logornot=="yes")
                                    {
-                                       echo "<li><a class=' py-sm-0 px-sm-3' href='logoutindex.php'>Logout</a></li>";
+                                       echo "<li><a class=' py-sm-0 px-sm-3' href='logoutindex.php'>Logout</a></li>
+                                       <li class='dropdown'>
+                                       <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false'>$citydisplay</a>
+        
+        
+                                        <div class='dropdown-menu'>
+                                        <form class='dropdown-item'>
+                                           <select name='cityname'>
+                                           <option value=''>Vellore</option>
+                                           <option value=''>Bengaluru</option>
+                                           <option value=''>Chennai</option>
+                                           </select>
+                                           <br><br>
+                                           <input type='text' placeholder='apartment no and locality'>
+                                         </form>  
+                                                                                
+                                        </div>
+                                            
+                                            
+                                           </li> 
+                                      ";
                                    }
                                 } 
                                 else
@@ -105,7 +123,6 @@ if($result->status=='success')
                             
                                <li class='dropdown'>
                                <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false'>$citydisplay</a>
-
 
 
                                 <div class='dropdown-menu'>
@@ -191,7 +208,7 @@ if($result->status=='success')
                            <br> 
                             <h4>Groceries</h4>
                             <ul class="social-icons">
-                                <li><a href=""> View Stores</a></li>
+                                <li><a href="grocery.php"> View Products</a></li>
                             </ul>
                         </div>
                     </div>
@@ -206,7 +223,7 @@ if($result->status=='success')
                             <h4>Fresh Fruits and Vegetables</h4>
 
                             <ul class="social-icons">
-                                <li><a href=""> View Stores</a></li>
+                                <li><a href="Vegetables.php"> View Products</a></li>
                             </ul>
                         </div>
                     </div>
@@ -220,7 +237,7 @@ if($result->status=='success')
                           <br>  
                             <h4>Dairy Products</h4>
                             <ul class="social-icons">
-                                <li><a href="">` View Stores</a></li>
+                                <li><a href="dairy.php">` View Products</a></li>
                             </ul>
                         </div>
                     </div>

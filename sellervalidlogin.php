@@ -14,6 +14,7 @@
             if($row[13]==$pp)
             { 
                 $_SESSION["log"]="yes";
+                $_SESSION["sellerusername"]=$un;
                 header("location:seller/sellerhome.php");
             }
             else
