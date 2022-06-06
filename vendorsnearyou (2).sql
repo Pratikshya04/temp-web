@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2022 at 06:24 PM
+-- Generation Time: Jun 06, 2022 at 05:46 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.28
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `vendorsnearyou`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `adminid` varchar(15) NOT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `password` varchar(18) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`adminid`, `email`, `password`) VALUES
+('Shailen@883', 'shailendra883@gmail.com', 'Shailen@883');
 
 -- --------------------------------------------------------
 
@@ -68,6 +87,7 @@ CREATE TABLE `orders` (
 CREATE TABLE `products` (
   `p_id` bigint(20) NOT NULL,
   `p_name` varchar(30) NOT NULL,
+  `pcategory` varchar(100) NOT NULL,
   `p_desc` varchar(100) NOT NULL,
   `price` int(10) NOT NULL,
   `image` varchar(100) NOT NULL
@@ -77,19 +97,17 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`p_id`, `p_name`, `p_desc`, `price`, `image`) VALUES
-(3, 'Fine Quality Fruit', '', 100, 'apple-500x500.jpg'),
-(4, 'Fine Quality Fruit', '', 150, '1256.750@2x.jpg'),
-(5, 'Fine Quality Fruit', '', 80, 'orange_342874121.jpg'),
-(6, 'Fine Quality Vegetable', '', 60, '61yXL70-RaL._SX679_.jpg'),
-(7, 'Fine Quality Vegetable', '', 50, 'istockphoto-511868689-612x612.jpg'),
-(8, 'Fine Quality Vegetable', '', 30, 'download.jfif'),
-(9, 'Fine Quality Salt', '', 20, 'tata-iodised-salt-1-kg-product-images-o490000073-p490000073-0-202203170554.jpg'),
-(50, 'Tasty Biscuit Sweet and Salty', '', 50, '50 50 set of 2-800x800.jpg'),
-(51, 'Fine Bread', '', 40, 'Brown-Bread-2-600x600.png'),
-(52, 'Fresh Paneer', '', 80, 'fresh-paneer-500x500.jpg'),
-(53, 'Fresh Butter', '', 65, 'butter_137866427.jpg'),
-(55, 'Fresh Milk', '', 35, 'milk_625x300_41416559876.webp');
+INSERT INTO `products` (`p_id`, `p_name`, `pcategory`, `p_desc`, `price`, `image`) VALUES
+(63, 'Orange', 'fruitsveggies', 'Fine Quality Fruits', 80, 'orange_342874121.jpg'),
+(67, 'Potato', 'fruitsveggies', 'Fine Quality Vegetables', 40, '61yXL70-RaL._SX679_.jpg'),
+(68, 'Cauliflower', 'fruitsveggies', 'Fine Quality Vegetables', 60, 'istockphoto-511868689-612x612.jpg'),
+(69, 'Tomato', 'fruitsveggies', 'Fine Quality Vegetables', 30, 'download.jfif'),
+(73, 'Apple', 'fruitsveggies', 'Fine Quality Fruits', 100, 'apple-500x500.jpg'),
+(74, 'Mango', 'fruitsveggies', 'Fine Quality Fruits', 150, '1256.750@2x.jpg'),
+(75, 'Tata Salt', 'grocery', 'iodised salt', 15, 'tata-iodised-salt-1-kg-product-images-o490000073-p490000073-0-202203170554.jpg'),
+(76, '50-50 Biscuit Combo', 'grocery', 'pack of 2', 40, '50 50 set of 2-800x800.jpg'),
+(77, 'Paneer', 'dairyproducts', 'cow milk paneer', 50, 'fresh-paneer-500x500.jpg'),
+(78, 'Butter', 'dairyproducts', '', 70, 'butter_137866427.jpg');
 
 -- --------------------------------------------------------
 
@@ -137,6 +155,12 @@ INSERT INTO `seller` (`sellerid`, `sfname`, `slname`, `susername`, `semail`, `sp
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`adminid`);
+
+--
 -- Indexes for table `customerregister`
 --
 ALTER TABLE `customerregister`
@@ -180,7 +204,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `p_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `p_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- AUTO_INCREMENT for table `seller`

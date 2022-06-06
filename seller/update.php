@@ -1,8 +1,3 @@
-<?php
-session_start();
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,27 +47,20 @@ session_start();
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="sellerhome.php" class="nav-item nav-link">Home</a>
-                    <a href="addproduct.php" class="nav-item nav-link active" style="color:green;">Products</a>
+                    <a href="sellerhome.php" class="nav-item nav-link active">Home</a>
+                    <a href="addproduct.php" class="nav-item nav-link">Products</a>
                     <a href="product.html" class="nav-item nav-link">My Profile</a>
                     
-                        
+                        <a href="#" class="nav-item nav-link">Sales</a>
                         
                     </div>
-                    <a href="contact.html" class="nav-item nav-link" style="color:black;">Messages</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
-                <?php
-                              if(isset($_SESSION['log']))
-                              {
-                                  $logornot=$_SESSION["log"];
-                                   if($logornot=="yes")
-                                   {
-                                       echo "<a class='btn btn-outline-primary rounded-pill py-sm-4 px-sm-3' href='../index.php'>Logout</a>";
-                                   }
-                                } 
-                              
-                            ?>
-                
+                <div class="d-none d-lg-flex ms-2">
+                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                        <small class="fa fa-search text-body"></small>
+                    </a>
+                </div>
             </div>
         </nav>
     </div>
@@ -86,9 +74,9 @@ session_start();
         <div class="row align-items-center" style= "margin-left:10% ;margin-top:7%;">
           <div class="col-md-8" style="margin-top:-5em; margin-left:5em;">
             <br><br><br>
-            <h3>Add Product</h3>
-             <p class="mb-4" style="color:black">Enter Product details to add new product</p>
-            <form action="validnewproduct.php" method="POST" enctype="multipart/form-data">
+            <h3>Update Product</h3>
+             <p class="mb-4" style="color:black">Enter details to update the required field </p>
+            <form action="validupdateproduct.php" method="POST" enctype="multipart/form-data">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group first">
@@ -141,8 +129,9 @@ session_start();
             
         
               <div> 
-              <input type="submit" value="ADD" class="btn px-5">
+              <input type="submit" value="UPDATE" class="btn px-5">
                </div>
+               
               
 
             </form>
@@ -151,5 +140,6 @@ session_start();
       </div>
     </div> 
   </div>
+  
 
 
