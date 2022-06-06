@@ -15,8 +15,7 @@
     $('#example').DataTable( {
         dom: 'Bfrtip',
         buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
-        ]
+            'copy', 'csv', 'excel', 'pdf', 'print']
     } );
 } )
 </script>
@@ -408,10 +407,9 @@
         <a href="#" class="btn "></a>
       </div>
     </div>
-  </div>
+  </div><br><br>
   <div style='float:right; width:80%'>
 	<br>
-    <br><br>
 	<table border="1" id="example" class="display" style='width:50em;margin-left:-1.875em !important' >
          <thead>
              <tr style='color:black;font-weight:bold'>
