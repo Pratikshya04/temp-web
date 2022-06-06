@@ -46,9 +46,9 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="products.html">Products</a></li>
-                            <li><a href="checkout.html" class="active">Checkout</a></li>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="products.php">Products</a></li>
+                            <li><a href="checkout.php" class="active">Checkout</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
                               
@@ -59,7 +59,7 @@
                                     <a class="dropdown-item" href="terms.html">Terms</a>
                                 </div>
                             </li>
-                            <li><a href="contact.html">Contact</a></li> 
+                            <li><a href="contact.php">Contact</a></li> 
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
