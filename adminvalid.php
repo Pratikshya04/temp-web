@@ -18,9 +18,7 @@
             }
             else
             {
-              header("location:admin/adminlogin.php");
-              echo "incorrect username/password";
-
+              header("location:adminlogin.php");
             }
         }
         

@@ -73,7 +73,7 @@
           <div class="col-md-7" style="margin-top:20%;">
             <h3>Login</h3>
             <p class="mb-4">Enter Your Username and Password</p>
-            <form action="loginvalid.php" method="post">
+            <form action="adminvalid.php" method="post">
               <div class="form-group first">
                 <label for="username">Username</label>
                 <input type="text" class="form-control" name="username" placeholder="your-email@gmail.com" id="username">
