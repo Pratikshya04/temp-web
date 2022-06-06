@@ -73,14 +73,14 @@ if($result->status=='success')
                                     <a class="dropdown-item" href="">Dairy Products</a>
                                     
                                 </div>
-                            <li><a href="">Checkout</a></li>
+                            <li><a href="checkout.php">Checkout</a></li>
                             
                             
                             
                     
-                            <li><a href="">About Us</a></li>
+                            <li><a href="#">About Us</a></li>
                         
-                            <li><a href="">Contact</a></li> 
+                            <li><a href="#">Contact</a></li> 
                             <?php
                               if(isset($_SESSION["clog"]))
                               {
@@ -212,8 +212,8 @@ if($result->status=='success')
               
                 <div class="col-lg-12 col-md-12 col-xs-12">
                     <div class="contact-form section-bg" style="background-image: url(assets/images/contact-1-720x480.jpg)">
-                        <form id="contact" action="" method="post" style="">
-                          <div class="row" style="">
+                        <form id="contact" action="" method="post" >
+                          <div class="row" >
                             <div class="col-md-6 col-sm-12">
                               <fieldset>
                                 <input name="name" type="text" id="name" placeholder="Your Name*" required="">

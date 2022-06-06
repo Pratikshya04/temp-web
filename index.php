@@ -128,9 +128,9 @@ if($result->status=='success')
                                 <div class='dropdown-menu'>
                                 <form class='dropdown-item'>
                                    <select name='cityname'>
-                                   <option value=''>Vellore</option>
-                                   <option value=''>Bengaluru</option>
-                                   <option value=''>Chennai</option>
+                                   <option value='Vellore'>Vellore</option>
+                                   <option value='Bengaluru'>Bengaluru</option>
+                                   <option value='Chennai'>Chennai</option>
                                    </select>
                                    <br><br>
                                    <input type='text' placeholder='apartment no and locality'>
